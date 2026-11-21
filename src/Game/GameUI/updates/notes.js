@@ -59,11 +59,12 @@ const NEW_UPDATES = [
     date: "2026-11-21",
     banners: [
       {
-        title: "Byzantium in 1200",
+        title: "A new opening for Medieval 1200",
         items: [
-          "Alexios III starts with a contested throne and a strained frontier.",
-          "Bulgaria and Venice weigh their own interests when you ask for support.",
-          "The rulers of Acre, Antioch, Tripoli and Cyprus respond to their own concerns.",
+          "Alexios III starts with a contested throne, and Bulgaria and Venice bargain for their own interests.",
+          "Two rival kings seek support from the princes of the Holy Roman Empire.",
+          "Cairo, Damascus and Aleppo bargain for themselves during the Ayyubid succession struggle.",
+          "Lusignan Cyprus is playable as its own kingdom.",
         ],
       },
     ],
