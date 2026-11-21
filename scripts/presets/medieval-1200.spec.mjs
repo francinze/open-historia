@@ -315,9 +315,7 @@ export default {
     "army. The Holy Roman Empire is a loose confederation of princes under an elected emperor. " +
     "The Angevin (Plantagenet) kings of England also hold Normandy, Anjou and Aquitaine as " +
     "vassals of the French crown — a perpetual source of war (the map cannot show these French " +
-    "holdings; treat western France as contested between England and France). The Byzantine " +
-    "Empire is intact but internally weak; the Fourth Crusade's sack of Constantinople (1204) " +
-    "has NOT happened. The Almohads dominate the Maghreb and southern Iberia while Castile, " +
+    "holdings; treat western France as contested between England and France). The Almohads dominate the Maghreb and southern Iberia while Castile, " +
     "Aragón, Navarre and Portugal press the Reconquista. The Ayyubids of Saladin's dynasty hold " +
     "Egypt and Syria; the Crusader states (Jerusalem, Antioch, Tripoli, Cyprus) cling to the " +
     "coast. The Abbasid Caliph in Baghdad has regained real power; the Khwarazmian Empire rises " +
@@ -329,14 +327,39 @@ export default {
     "the Khmer Empire at Angkor rules mainland Southeast Asia, Pagan rules Burma, Dai Viet " +
     "holds the Red River, and Srivijaya commands the straits of the spice trade. Religion — " +
     "Latin Christianity, Orthodoxy, Sunni and Shia Islam — is the primary axis of alliance and " +
-    "war. Mongol unification under Temüjin (Genghis Khan) looms after 1206.",
+    "war. Mongol unification under Temüjin (Genghis Khan) looms after 1206.\n\n" +
+    "Byzantium begins under Alexios III Angelos, who deposed and blinded his brother Isaac II " +
+    "in 1195. Isaac and his son Alexios remain potential rallying points for opposition. " +
+    "Constantinople still has resources, but extraordinary taxes, large levies and sustained " +
+    "campaigns require cooperation from provincial commanders and aristocratic families. " +
+    "Show what those elites ask in return or why they resist. Honour the player's choices " +
+    "and let successful bargaining and reforms improve the empire's position.\n\n" +
+    "Kaloyan's Bulgaria is an independent frontier rival. Ivanko commands for Byzantium " +
+    "around Philippopolis at the opening and has the means to break with the court. If he " +
+    "rebels, Kaloyan weighs the advantages of imperial disorder against any threat Ivanko " +
+    "poses to Bulgaria. Requests for help should be judged against Bulgarian interests and " +
+    "the concrete terms on offer, such as a frontier concession or a truce.\n\n" +
+    "Alexios III renewed Venetian trading privileges in 1198. Venice has reason to keep " +
+    "trade open, but ships and military support require a separate bargain. Give Enrico " +
+    "Dandolo commercial and maritime interests of his own. Within the Crusader States' " +
+    "shared map label, distinguish the interests of the rulers of Jerusalem at Acre, " +
+    "Antioch, Tripoli and Lusignan Cyprus. Weigh Antioch's history of contested imperial " +
+    "claims and Cyprus's former Byzantine rule where relevant. A deal with one ruler " +
+    "does not commit the others.\n\n" +
+    "The new crusade is still being organised at the start. Its eventual course depends " +
+    "on the expedition's arrangements, Venetian interests and the imperial succession as " +
+    "they develop in play.",
 
   startingTimelineText:
     "The year of grace 1200. In Rome the formidable Pope Innocent III asserts the supremacy of " +
     "the Church over kings. In Paris, Philip II Augustus schemes to strip the Plantagenets of " +
     "their French lands; across the Channel the lion-hearted Richard is newly dead and his " +
-    "brother John wears England's crown uneasily. In Constantinople the Angeloi squander the " +
-    "Roman inheritance as a crusader fleet gathers at Venice. Saladin's heirs quarrel over Egypt " +
+    "brother John wears England's crown uneasily. Alexios III holds Constantinople after " +
+    "deposing his brother Isaac II. Barbarossa's crusaders occupied Philippopolis and " +
+    "Adrianople a decade ago, and Kaloyan's Bulgaria now presses the imperial frontier. " +
+    "Ivanko holds command around Philippopolis, while Venice trades under privileges " +
+    "renewed in 1198. Innocent has called a new crusade, and its organisers are still " +
+    "assembling the expedition. Saladin's heirs quarrel over Egypt " +
     "and Syria while the banners of the Cross still fly over Acre and Antioch. In Iberia the " +
     "Almohad caliph holds the south against the Christian kings. Beyond the steppe, an obscure " +
     "Mongol chieftain named Temüjin is uniting the tribes. An age of cathedrals, crusades and " +
