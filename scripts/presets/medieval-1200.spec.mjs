@@ -59,7 +59,8 @@ export default {
     PAPAL: { name: "Papal States", color: "#e6d27a", aliases: ["Patrimony of St Peter", "the Church"] },
     SICI:  { name: "Kingdom of Sicily", color: "#c97a2e", aliases: ["Sicily", "Hauteville Sicily"] },
     VEN:   { name: "Republic of Venice", color: "#8a7d3f", aliases: ["Venice", "La Serenissima"] },
-    JERU:  { name: "Crusader States", color: "#e04545", aliases: ["Outremer", "Kingdom of Jerusalem", "Antioch", "Cyprus"] },
+    JERU:  { name: "Crusader States", color: "#e04545", aliases: ["Outremer", "Kingdom of Jerusalem", "Antioch", "Tripoli"] },
+    CYP_K: { name: "Kingdom of Cyprus", color: "#b86d35", aliases: ["Cyprus", "Lusignan Cyprus"] },
     ARM_C: { name: "Cilician Armenia", color: "#d98cae", aliases: ["Armenian Cilicia", "Little Armenia"] },
     HUNG:  { name: "Kingdom of Hungary", color: "#3f9d9d", aliases: ["Hungary", "Croatia-Hungary"] },
     POL_K: { name: "Duchy of Poland", color: "#d23ca0", aliases: ["Poland", "Piast Poland"] },
@@ -117,7 +118,7 @@ export default {
     KHWA:  ["IRN", "TKM", "UZB", "TJK"],   // Afghanistan belongs to the rival Ghurids
     GHUR:  ["AFG", "PAK"],                 // + the freshly conquered north-Indian plain below
     SELJ:  ["TUR"],                        // overridden along the coasts/frontiers below
-    JERU:  ["CYP"],                        // + Levantine coast & Antioch below
+    CYP_K: ["CYP"],
     // — Asia & Africa —
     JAP_K: ["JPN"],
     GORY:  ["KOR", "PRK"],
@@ -261,7 +262,8 @@ export default {
     ["Damascus", "Damascus", 3, 80000],
     ["Aleppo", "Aleppo", 2, 60000],
     ["Jerusalem", "Jerusalem", 2, 20000],
-    ["Acre", [35.07, 32.93], 2, 40000], // Crusader capital
+    ["Acre", [35.07, 32.93], 2, 40000], // Seat of the Kingdom of Jerusalem
+    ["Nicosia", [33.36, 35.17], 4], // Seat of the Kingdom of Cyprus
     ["Baghdad", "Baghdad", 4, 300000], // Abbasid caliphal seat
     ["Mosul", "Mosul", 2, 40000],
     ["Konya", "Konya", 2, 30000], // Seljuk Rum capital
@@ -312,13 +314,13 @@ export default {
   simulationRules:
     "It is the year 1200, the height of the Middle Ages. Warfare is feudal: mounted knights, " +
     "levied infantry, castles and sieges; there is NO gunpowder and NO standing professional " +
-    "army. The Holy Roman Empire is a loose confederation of princes under an elected emperor. " +
+    "army. The princes and cities of the Holy Roman Empire command resources of their own. " +
     "The Angevin (Plantagenet) kings of England also hold Normandy, Anjou and Aquitaine as " +
     "vassals of the French crown — a perpetual source of war (the map cannot show these French " +
     "holdings; treat western France as contested between England and France). The Almohads dominate the Maghreb and southern Iberia while Castile, " +
-    "Aragón, Navarre and Portugal press the Reconquista. The Ayyubids of Saladin's dynasty hold " +
-    "Egypt and Syria; the Crusader states (Jerusalem, Antioch, Tripoli, Cyprus) cling to the " +
-    "coast. The Abbasid Caliph in Baghdad has regained real power; the Khwarazmian Empire rises " +
+    "Aragón, Navarre and Portugal press the Reconquista. The Latin states of Jerusalem, Antioch " +
+    "and Tripoli hold parts of the Levantine coast. The Abbasid Caliph in Baghdad has regained " +
+    "real power; the Khwarazmian Empire rises " +
     "in Persia while its rival, the Ghurid Empire, has just conquered the north-Indian plain " +
     "(Delhi fell in 1192). Kievan Rus' is a quarrelling family of principalities from Novgorod " +
     "to Kiev; the Pontic steppe belongs to the pagan Cumans (Kipchaks) and the middle Volga to " +
@@ -328,6 +330,17 @@ export default {
     "holds the Red River, and Srivijaya commands the straits of the spice trade. Religion — " +
     "Latin Christianity, Orthodoxy, Sunni and Shia Islam — is the primary axis of alliance and " +
     "war. Mongol unification under Temüjin (Genghis Khan) looms after 1206.\n\n" +
+    "In the Holy Roman Empire, Philip of Swabia and Otto of Brunswick were both elected " +
+    "King of the Romans in 1198 and claim the same crown. Treat the HRE map label as a " +
+    "shared realm with competing allegiances. For an imperial levy, subsidy or foreign " +
+    "commitment, establish which claimant is asking and which princes recognise him. " +
+    "Let princes bargain for privileges, stay neutral or change sides in response to play.\n\n" +
+    "The Ayyubid map label represents several courts. At the January opening, young " +
+    "al-Mansur holds the Egyptian throne under al-Afdal's regency. Al-Adil holds Damascus " +
+    "and is contesting power in Egypt. Al-Zahir Ghazi governs Aleppo and has interests " +
+    "of his own. For truces, levies and access, identify the court making the agreement " +
+    "and limit its commitments to the cities and forces it can actually command. " +
+    "Let Egypt's succession resolve through play.\n\n" +
     "Byzantium begins under Alexios III Angelos, who deposed and blinded his brother Isaac II " +
     "in 1195. Isaac and his son Alexios remain potential rallying points for opposition. " +
     "Constantinople still has resources, but extraordinary taxes, large levies and sustained " +
@@ -343,24 +356,27 @@ export default {
     "trade open, but ships and military support require a separate bargain. Give Enrico " +
     "Dandolo commercial and maritime interests of his own. Within the Crusader States' " +
     "shared map label, distinguish the interests of the rulers of Jerusalem at Acre, " +
-    "Antioch, Tripoli and Lusignan Cyprus. Weigh Antioch's history of contested imperial " +
-    "claims and Cyprus's former Byzantine rule where relevant. A deal with one ruler " +
-    "does not commit the others.\n\n" +
+    "Antioch and Tripoli. Cyprus is a separate Lusignan kingdom. Aimery rules Cyprus " +
+    "and holds the crown of Jerusalem through his marriage to Isabella I. The two kingdoms " +
+    "have separate resources and commitments even under the same ruler. Weigh Antioch's " +
+    "history of contested imperial claims and Cyprus's former Byzantine rule where relevant.\n\n" +
     "The new crusade is still being organised at the start. Its eventual course depends " +
     "on the expedition's arrangements, Venetian interests and the imperial succession as " +
     "they develop in play.",
 
   startingTimelineText:
     "The year of grace 1200. In Rome the formidable Pope Innocent III asserts the supremacy of " +
-    "the Church over kings. In Paris, Philip II Augustus schemes to strip the Plantagenets of " +
+    "the Church over kings. Philip of Swabia and Otto of Brunswick both claim the Roman " +
+    "kingship. In Paris, Philip II Augustus schemes to strip the Plantagenets of " +
     "their French lands; across the Channel the lion-hearted Richard is newly dead and his " +
     "brother John wears England's crown uneasily. Alexios III holds Constantinople after " +
     "deposing his brother Isaac II. Barbarossa's crusaders occupied Philippopolis and " +
     "Adrianople a decade ago, and Kaloyan's Bulgaria now presses the imperial frontier. " +
     "Ivanko holds command around Philippopolis, while Venice trades under privileges " +
     "renewed in 1198. Innocent has called a new crusade, and its organisers are still " +
-    "assembling the expedition. Saladin's heirs quarrel over Egypt " +
-    "and Syria while the banners of the Cross still fly over Acre and Antioch. In Iberia the " +
+    "assembling the expedition. In Egypt al-Afdal governs for the young al-Mansur while " +
+    "al-Adil presses his claim from Damascus and al-Zahir holds Aleppo. Aimery and Isabella " +
+    "reign in Jerusalem from Acre, and Aimery also rules Cyprus. In Iberia the " +
     "Almohad caliph holds the south against the Christian kings. Beyond the steppe, an obscure " +
     "Mongol chieftain named Temüjin is uniting the tribes. An age of cathedrals, crusades and " +
     "kings begins.",
