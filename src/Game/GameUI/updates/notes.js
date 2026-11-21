@@ -54,6 +54,21 @@ import { RELEASES } from "./notesReleases.js";
 // make UPDATES, newest first by date.
 const NEW_UPDATES = [
   {
+    id: "2026-11-byzantium-1200",
+    kind: "minor",
+    date: "2026-11-21",
+    banners: [
+      {
+        title: "Byzantium in 1200",
+        items: [
+          "Alexios III starts with a contested throne and a strained frontier.",
+          "Bulgaria and Venice weigh their own interests when you ask for support.",
+          "The rulers of Acre, Antioch, Tripoli and Cyprus respond to their own concerns.",
+        ],
+      },
+    ],
+  },
+  {
     // "remove the reccomended thing from command code on the popup when you start a game and dont have a configured key"
     // (the owner, 2026-11-10): GameUI/apiSetupPrompt.jsx ChoiceCard has no recommended badge or highlight.
     id: "2026-11-setup-choices-alike",
